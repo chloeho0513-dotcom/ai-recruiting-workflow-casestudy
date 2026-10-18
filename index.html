@@ -147,7 +147,11 @@ footer{font-size:13px;color:var(--muted);font-family:var(--f-mono);border-top:1p
 }
 @media (max-width:520px){
   .wrap{gap:68px;padding-block:36px 56px}
-  .shots{grid-template-columns:1fr}
+  .shots{grid-template-columns:1fr;gap:22px}
+  .shots .ph{height:auto;max-height:none}
+  .shots .ph-logo{padding:20px}
+  .shots .ph-logo img{max-width:140px}
+  .shots figcaption{margin-top:10px}
   .flow{grid-template-columns:1fr}
   .batches{grid-template-columns:repeat(2,1fr)}
 }
