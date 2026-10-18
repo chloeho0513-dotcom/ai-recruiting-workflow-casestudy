@@ -113,7 +113,7 @@ p{margin:0}
 .shots figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 
 /* Prompt */
-.parts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.parts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
 .parts>*{min-width:0}
 .part{border-top:3px solid var(--accent);padding-top:14px;display:flex;flex-direction:column;gap:6px}
 .part b{font-family:var(--f-display);font-size:20px}
@@ -141,7 +141,8 @@ details pre{margin:0;padding:0 22px 22px;white-space:pre-wrap;word-break:break-w
 footer{font-size:13px;color:var(--muted);font-family:var(--f-mono);border-top:1px solid var(--line);padding-top:22px}
 
 @media (max-width:860px){
-  .case,.parts{grid-template-columns:1fr}
+  .case{grid-template-columns:1fr}
+  .parts{grid-template-columns:repeat(2,1fr)}
   .flow{grid-template-columns:repeat(2,1fr)}
   .tips{grid-template-columns:1fr}
 }
@@ -154,6 +155,7 @@ footer{font-size:13px;color:var(--muted);font-family:var(--f-mono);border-top:1p
   .shots figcaption{margin-top:10px}
   .flow{grid-template-columns:1fr}
   .batches{grid-template-columns:repeat(2,1fr)}
+  .parts{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -261,12 +263,13 @@ footer{font-size:13px;color:var(--muted);font-family:var(--f-mono);border-top:1p
   <section id="prompt">
     <div class="sec-head">
       <div class="eyebrow">Prompt engineering</div>
-      <h2>Every prompt has three parts</h2>
+      <h2>Every prompt has four parts</h2>
     </div>
     <div class="parts">
       <div class="part"><b>JD</b><span>The full job description.</span></div>
       <div class="part"><b>Call notes</b><span>Raw notes from the hiring manager call: who they like, who to avoid, budget, red flags, what "technical" really means. This is where the real signal is.</span></div>
       <div class="part"><b>Criteria list</b><span>8-10 points tagged must have, good to have or must not have, ranked by importance.</span></div>
+      <div class="part"><b>The 25 full profiles</b><span>The scraped profiles from the current batch, pasted in full at the bottom of the prompt.</span></div>
     </div>
 
     <div class="code">
