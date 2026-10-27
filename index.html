@@ -143,6 +143,18 @@ details pre{margin:0;padding:0 22px 22px;white-space:pre-wrap;word-break:break-w
 
 footer{font-size:13px;color:var(--muted);font-family:var(--f-mono);border-top:1px solid var(--line);padding-top:22px}
 
+.desk-br{display:none}
+@media (min-width:861px){
+  .desk-br{display:inline}
+  .hero{max-width:none}
+  .hero h1{font-size:clamp(56px,7.4vw,96px)}
+  .lede{max-width:none;font-size:22px}
+  .stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:40px;padding-top:0}
+  .stat{padding:26px 24px 0 0;border-top:0}
+  .stat+.stat{padding-left:24px;border-left:1px solid var(--line)}
+  .stat b{font-size:clamp(24px,2.3vw,30px);white-space:nowrap}
+  .stat span{max-width:none;margin-top:6px}
+}
 @media (max-width:860px){
   .case{grid-template-columns:1fr}
   .parts{grid-template-columns:repeat(2,1fr)}
@@ -170,14 +182,14 @@ footer{font-size:13px;color:var(--muted);font-family:var(--f-mono);border-top:1p
     <div>
       <div class="eyebrow">Case study · AI-enabled recruiting</div>
       <h1>The <em>25-profile</em> method</h1>
-      <p class="lede">How I doubled my workflow speed and brought token costs down to zero. I screen 200 profiles in 8 small runs, find the top 20, and reach out the same day.</p>
+      <p class="lede">How I doubled my workflow speed and brought token costs down to zero.<br class="desk-br"> I screen 200 profiles in 8 small runs, find the top 20, and reach out the same day.</p>
       <p class="byline">Case study and playbook</p>
       <div class="stats">
+        <div class="stat"><b>Top vendor</b><span>consistently, for a Big 4 firm and a systems integrator</span></div>
         <div class="stat"><b>2×</b><span>faster end to end</span></div>
         <div class="stat"><b>$0</b><span>extra token cost</span></div>
         <div class="stat"><b>~20</b><span>strong profiles per 200</span></div>
         <div class="stat"><b>&lt;30 min</b><span>to screen all 200 and reach the top 20</span></div>
-        <div class="stat"><b>Top vendor</b><span>consistently, for a Big 4 firm and a systems integrator</span></div>
       </div>
     </div>
   </header>
@@ -345,11 +357,11 @@ Innovation: Proactively stays ahead of AI developments and applies new technique
     </div>
     <div class="tips">
       <div class="tip"><i></i><p><b>Keep call notes messy and honest.</b> <span>Budget limits, firms to avoid and the hiring manager's gut feel change the ranking more than the JD does.</span></p></div>
-      <div class="tip"><i></i><p><b>Be specific on seniority vs. firm tier.</b> <span>The same years of experience costs a different amount at Accenture than at MBB.</span></p></div>
+      <div class="tip"><i></i><p><b>Start a new LLM chat for every prompt.</b> <span>The more congested one chat gets, the more the model hallucinates.</span></p></div>
+      <div class="tip"><i></i><p><b>Reuse the prompt exactly.</b> <span>All 8 runs use the same prompt, so rankings stay comparable.</span></p></div>
       <div class="tip"><i></i><p><b>Spell out the proof you want.</b> <span>Real project implementation, sales exposure, agentic AI and LLM experience, not just buzzwords.</span></p></div>
       <div class="tip"><i></i><p><b>Fix your Boolean first.</b> <span>A tight 200-profile pool matters more than a clever prompt.</span></p></div>
       <div class="tip"><i></i><p><b>Keep batches at 25.</b> <span>Bigger batches bring hallucination back.</span></p></div>
-      <div class="tip"><i></i><p><b>Reuse the prompt exactly.</b> <span>All 8 runs use the same prompt, so rankings stay comparable.</span></p></div>
       <div class="tip"><i></i><p><b>Reach out right after each batch.</b> <span>The best candidates are not waiting for you to finish.</span></p></div>
     </div>
   </section>
